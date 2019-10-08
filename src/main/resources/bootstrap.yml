@@ -1,0 +1,20 @@
+# name of the config server
+spring:
+   application:
+      name: centralized-config-service
+# name of the profile required to be active in the client
+   profiles:
+      active: development
+# ip and port of the config server
+   cloud:
+      config:
+         uri: http://localhost:8888
+# disable security when connecting to server
+management:
+   security:
+      enabled: false
+# expose actuator endpoints
+   endpoints:
+      web:
+         exposure:
+            include: "*"
